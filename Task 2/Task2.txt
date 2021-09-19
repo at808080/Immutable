@@ -1,19 +1,19 @@
 Age of Empires III D.E; feature: multiplayer server synchronisation system.
 
 Before commencing primary tests, smoke tests would be conducted to validate critical functionality of the game. 
-Test cases would include approval of online in game account based on current logged in Steam Account or Microsoft Account, 
+Test cases would include logging into in game account based on current logged in Steam or Microsoft Account, 
 searching for online servers based on a geographical filter, joining a server, joining and participating in a game 
-and in game input including manipulation of in game Entities and UI.
+and in game input including manipulation of in game entities and UI.
 
 A multiplayer server receives input from all players, updates entities’ properties 
 such as velocity, state, and quantitative attributes, and broadcasts updated properties back to clients (game participants), updating entities accordingly. 
-Clients predict subsequent properties entities which are compared with the server’s values after received and updated accordingly. 
+Clients predict subsequent properties of entities which are compared with the server’s values after received and updated accordingly. 
 
 Automated testing with a Data Driven Framework would be appropriate for comparing local client’s predicted entity properties 
 to both the “correct” predictions expected based on given input and the “real” properties received from the server each “tick”. 
 The automated framework would allow for data to be collected for each tick. 
 The data would be used to assess the correctness of predicted values for in game entities calculated locally compared to expected predictions, 
-and to also assess the appropriateness of predictions with respect to server’s real values.
+and to also assess the appropriateness of correct predictions with respect to server’s real values.
 
 If discrepancies are noted, further Unit and Integration testing should be conducted on prediction and server logic.
 
