@@ -1,0 +1,27 @@
+Happy Path:
+
+Test Scenario S001: Player opens application for the first time that day whilst already logged into their account. 
+Test Case S001.C001: Account updated to show receipt of the reward.
+Test Case S001.C002: The appropriate UI is displayed with correct styling and text notifying receipt of the reward. 
+
+Test Scenario S002: Player opens application for the (non first) time that day.
+Test Case S002.C001: Account not updated with receipt of any award and remains unchanged.
+
+Test Scenario S003: Player opens application whilst not actually logged into their account.
+Test Case S003.C001: Player redirected to appropriate Login / Register form. Once player logs in with correct details, account is updated with reward correctly.
+
+Edge Case:
+Test Scenario S003: Player opens application for first time that day whilst game’s server is temporarily down for maintenance.
+Test Case S003.C001: The appropriate UI shown notifying that the server is down. When the player subsequently starts the application again when the server is up, their account is correctly updated with the reward.
+
+Test Scenario S004: Load testing with many clients simultaneously opening the application, sending a large volume of requests to the server’s backend.
+Test Case S004.C001: The user’s account is correctly updated with the reward within the time limit specified by the requirements.
+
+Automation of testing could encompass a Data Driven Framework, 
+which would be used to assess the correctness of reward assigned, 
+given player’s before and after states, by comparing to expected values, 
+using software such as TestingWhiz. 
+A Linear Test Framework could utilise an RPA software such as Selenium, 
+if the game is accessed with a web browser, 
+or TestArchitect or Ranorex, if the game is a desktop application (both examples are OS – Agnostic) 
+to automate UI navigation and form entry. Load testing could be conducted using Apache Jmeter, for example.
