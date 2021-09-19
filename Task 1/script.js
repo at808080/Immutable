@@ -2,7 +2,7 @@
 Task 1
 
 After navigating to https://godsunchained.com/
-if copied and pasted into the Chrome Console,
+if copied and pasted into the Chrome Console and run,
 this script will traverse the DOM in Breadth First Search fashion, 
 where at each node it will identify child nodes with duplicate tags,
 and print each duplicate child out,
@@ -137,7 +137,7 @@ function BFS(elem) {
 
 console.log("BFS:")
 
-BFS(document.body);
+BFS(document);
 
 /*
 
